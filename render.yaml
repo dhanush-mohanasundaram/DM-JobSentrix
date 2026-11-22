@@ -1,0 +1,25 @@
+# Render Blueprint for the backend. Create a Neon Postgres DB first and paste its URL.
+services:
+  - type: web
+    name: jobtrack-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false   # e.g. ["https://your-app.vercel.app"]
+      - key: LLM_PROVIDER
+        value: groq
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ENABLE_SCHEDULER
+        value: "true"
