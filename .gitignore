@@ -1,0 +1,62 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+*.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temp / test output files
+backend/test_results.txt
+backend/cov_results.txt
+backend/alembic_out.txt
+backend/alembic2.txt
+backend/build_out.txt
+backend/tsc_results.txt
+backend/tsc_out.txt
+backend/tsc2.txt
+backend/tsc_final.txt
+backend/tsc_check.txt
+backend/build_final.txt
+backend/build_check.txt
+backend/build_purple.txt
+backend/build_light.txt
+backend/build_v3.txt
+backend/check_db.py
+backend/test_api.py
+backend/test_register.ps1
+backend/START_BACKEND.bat
+backend/start_server.ps1
+frontend/tsc_out.txt
+frontend/tsc2.txt
+frontend/tsc_final.txt
+frontend/tsc_check.txt
+frontend/tsc_results.txt
+frontend/build_out.txt
+frontend/build_check.txt
+frontend/build_final.txt
+frontend/build_purple.txt
+frontend/build_light.txt
+frontend/build_v3.txt
+frontend/build_purple.txt
+
+# Agent task files
+.agents/
